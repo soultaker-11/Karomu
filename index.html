@@ -5,56 +5,12 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Karomu Quick Loan Services</title>
   <meta name="description" content="Karomu Quick Loan Services — Loans, asset recovery, new & used motorbikes and tukutuks in various sizes.">
-  <style>
-    :root{
-      --accent:#1f8feb;
-      --dark:#0f1724;
-      --muted:#6b7280;
-      --card:#ffffff;
-      --bg:#f4f7fb;
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--dark);line-height:1.45}
-    header{background:#fff;border-bottom:1px solid #e6e9ef;position:sticky;top:0;z-index:10}
-    .container{max-width:1100px;margin:0 auto;padding:1rem}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem}
-    .brand{display:flex;align-items:center;gap:.75rem;font-weight:700}
-    .brand .logo{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#2ab27b);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800}
-    nav ul{display:flex;gap:1rem;list-style:none;padding:0;margin:0}
-    nav a{color:var(--dark);text-decoration:none;font-weight:600}
-    .hero{padding:3rem 0;display:grid;grid-template-columns:1fr;gap:1.5rem;align-items:center}
-    .hero-grid{display:flex;flex-direction:column;gap:1rem}
-    .eyebrow{color:var(--muted);font-weight:700}
-    .hero h1{font-size:1.9rem;margin:0;color:var(--dark)}
-    .hero p{margin:0;color:var(--muted)}
-    .cta{display:flex;gap:.75rem;margin-top:.75rem;flex-wrap:wrap}
-    .btn{padding:.65rem 1rem;border-radius:8px;border:0;cursor:pointer;font-weight:700}
-    .btn-primary{background:var(--accent);color:#fff}
-    .btn-outline{background:transparent;border:2px solid var(--accent);color:var(--accent)}
-    .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1.25rem}
-    .card{background:var(--card);padding:1rem;border-radius:10px;box-shadow:0 6px 18px rgba(12,20,30,0.05)}
-    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:2rem 0}
-    .service h3{margin:.5rem 0 0;color:var(--dark)}
-    .inventory{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-top:1rem}
-    .inventory .item{background:#fff;border-radius:8px;padding:0.5rem;display:flex;flex-direction:column;gap:.5rem;align-items:center}
-    .inventory img{width:100%;height:120px;object-fit:cover;border-radius:6px}
-    form{background:#fff;padding:1rem;border-radius:10px;box-shadow:0 6px 18px rgba(12,20,30,0.05)}
-    label{display:block;font-weight:600;margin-top:.5rem}
-    input,select,textarea{width:100%;padding:.6rem;border-radius:8px;border:1px solid #d1d5db;margin-top:.35rem}
-    .two{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
-    footer{padding:1.5rem 0;margin-top:2rem;background:transparent}
-    .footer-grid{display:flex;flex-direction:column;gap:.75rem;align-items:center}
-    .muted{color:var(--muted)}
-    @media(min-width:780px){
-      .hero{grid-template-columns:1fr 420px}
-      .hero h1{font-size:2.25rem}
-      .footer-grid{flex-direction:row;justify-content:space-between}
-    }
-  </style>
+  <meta name="form-endpoint" content="REPLACE_FORM_ENDPOINT">
+  <meta name="owner-email" content="REPLACE_EMAIL">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header>
+  <header class="header">
     <div class="container nav">
       <div class="brand">
         <div class="logo">KQ</div>
@@ -63,12 +19,13 @@
           <div class="muted" style="font-size:.85rem">Loans • Asset Recovery • Motorbikes & Tukutuks</div>
         </div>
       </div>
-      <nav>
+      <nav id="nav-links">
         <ul>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#inventory">Inventory</a></li>
-          <li><a href="#apply">Apply</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="inventory.html">Inventory</a></li>
+          <li><a href="apply.html">Apply</a></li>
+          <li><a href="asset-recovery.html">Asset Recovery</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -81,37 +38,34 @@
         <h1 id="hero-title">Karomu Quick Loan Services</h1>
         <p>Fast loan approvals, professional asset recovery, and a wide selection of new & used motorbikes and tukutuks in different sizes.</p>
         <div class="cta">
-          <a class="btn btn-primary" href="#apply">Apply for a Loan</a>
-          <a class="btn btn-outline" href="#inventory">Browse Inventory</a>
+          <a class="btn btn-primary" href="apply.html">Apply for a Loan</a>
+          <a class="btn btn-outline" href="inventory.html">Browse Inventory</a>
         </div>
 
         <section id="services" class="services" aria-label="Our Services">
           <div class="card service">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M3 12h18" stroke="#1f8feb" stroke-width="2" stroke-linecap="round"/></svg>
             <h3>Quick Loans</h3>
-            <p class="muted">Short-term and medium-term loans with quick turnaround and flexible repayment options.</p>
+            <p class="muted">Short and medium-term loans with quick turnaround.</p>
           </div>
 
           <div class="card service">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M12 3v18" stroke="#2ab27b" stroke-width="2" stroke-linecap="round"/></svg>
             <h3>Asset Recovery</h3>
-            <p class="muted">Professional and lawful asset recovery services to help you reclaim collateral.</p>
+            <p class="muted">Professional, lawful recovery of collateral and assets.</p>
           </div>
 
           <div class="card service">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M4 7h16l-1.5 9h-13z" stroke="#ff8a00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <h3>Motorbikes & Tukutuks</h3>
-            <p class="muted">Sales of new and used motorbikes and tukutuks in various sizes to suit your needs.</p>
+            <h3>Motorbikes & TukTuks</h3>
+            <p class="muted">Sales of new and used motorbikes and tukutuks.</p>
           </div>
         </section>
       </div>
 
       <aside>
-        <div class="card" id="apply" aria-labelledby="apply-title">
+        <div class="card" id="apply-widget" aria-labelledby="apply-title">
           <h3 id="apply-title">Quick Loan Application</h3>
           <form id="loanForm" novalidate>
             <label for="name">Full name</label>
-            <input id="name" name="name" type="text" required>
+            <input id="name" name="full_name" type="text" required>
 
             <label for="phone">Phone</label>
             <input id="phone" name="phone" type="tel" required>
@@ -119,7 +73,7 @@
             <div class="two">
               <div>
                 <label for="amount">Loan amount (approx)</label>
-                <input id="amount" name="amount" type="number" min="1" required>
+                <input id="amount" name="loan_amount" type="number" min="1" required>
               </div>
               <div>
                 <label for="term">Term (months)</label>
@@ -134,7 +88,7 @@
             </div>
 
             <label for="collateral">Collateral (if any)</label>
-            <input id="collateral" name="collateral" type="text">
+            <input id="collateral" name="collateral_description" type="text">
 
             <label for="message">Notes</label>
             <textarea id="message" name="message" rows="3"></textarea>
@@ -153,59 +107,6 @@
         </div>
       </aside>
     </section>
-
-    <section id="inventory" aria-labelledby="inventory-title">
-      <h2 id="inventory-title">Featured Inventory</h2>
-      <p class="muted">New and used options — motorcycles and tukutuks in different sizes and prices.</p>
-      <div class="inventory">
-        <div class="item">
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23e6eef9'/%3E%3C/text%3E%3C/svg%3E" alt="Motorbike sample">
-          <strong>125cc Bajaj (Used)</strong>
-          <div class="muted">Reliable, low mileage</div>
-          <div style="width:100%;display:flex;gap:.5rem;margin-top:.5rem">
-            <a class="btn btn-outline" href="#contact" style="flex:1">Enquire</a>
-            <a class="btn btn-primary" href="#apply" style="flex:1">Reserve</a>
-          </div>
-        </div>
-
-        <div class="item">
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23f7efe6'/%3E%3C/text%3E%3C/svg%3E" alt="Tuk Tuk sample">
-          <strong>TukTuk - Kainiu (New)</strong>
-          <div class="muted">Fuel efficient, compact size</div>
-          <div style="width:100%;display:flex;gap:.5rem;margin-top:.5rem">
-            <a class="btn btn-outline" href="#contact" style="flex:1">Enquire</a>
-            <a class="btn btn-primary" href="#apply" style="flex:1">Reserve</a>
-          </div>
-        </div>
-
-        <div class="item">
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23eaf6ee'/%3E%3C/text%3E%3C/svg%3E" alt="Large Tuk Tuk sample">
-          <strong>TukTuk -ZhongSheng (Used)</strong>
-          <div class="muted">Spacious, ideal for cargo.</div>
-          <div style="width:100%;display:flex;gap:.5rem;margin-top:.5rem">
-            <a class="btn btn-outline" href="#contact" style="flex:1">Enquire</a>
-            <a class="btn btn-primary" href="#apply" style="flex:1">Reserve</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="asset-recovery" style="margin-top:2rem">
-      <h2>Asset Recovery</h2>
-      <p class="muted">We provide professional asset recovery services performed in accordance with local laws and industry best practices. Contact our team for guidance and next steps.</p>
-    </section>
-
-    <section id="contact" style="margin-top:2rem">
-      <h2>Get in Touch</h2>
-      <div class="card-grid" style="margin-top:1rem;display:grid;grid-template-columns:1fr;gap:1rem">
-        <div class="card">
-          <strong>Karomu Quick Loan Services</strong>
-          <p class="muted">Main Office: 123 Second Street, Kiboga Town</p>
-          <p class="muted">Phone: <a href="tel:+256782559240">+256782559240</a></p>
-          <p class="muted">Email: <a href="mailto:support@karomuquickservices">support@karomuquickservices.com</a></p>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer>
@@ -215,18 +116,7 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    document.getElementById('loanForm').addEventListener('submit', function(e){
-      e.preventDefault();
-      const form = e.target;
-      const name = form.name.value.trim();
-      const phone = form.phone.value.trim();
-      const amount = form.amount.value;
-      if(!name || !phone || !amount){ alert('Please complete required fields.'); return; }
-      alert('Application submitted. Our agent will contact you shortly.');
-      form.reset();
-    });
-  </script>
+  <script src="js/scripts.js" defer></script>
 </body>
 </html>
+  
