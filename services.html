@@ -3,14 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Services - Karomu Quick Loan Services</title>
-  <meta name="description" content="Services - Quick loans, asset recovery, motorbikes & tukutuks.">
-  <meta name="owner-email" content="REPLACE_EMAIL">
-  <meta name="form-endpoint" content="REPLACE_FORM_ENDPOINT">
+  <title>Inventory - Karomu Quick Loan Services</title>
+  <meta name="description" content="Browse our motorbikes and tukutuks inventory.">
   <link rel="stylesheet" href="css/styles.css">
+  <meta name="owner-email" content="REPLACE_EMAIL">
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
   <header class="header">
     <div class="container nav">
       <div class="brand">
@@ -20,47 +18,50 @@
       <nav id="nav-links">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="inventory.html">Inventory</a></li>
-          <li><a href="asset-recovery.html">Asset Recovery</a></li>
+          <li><a href="services.html">Services</a></li>
           <li><a href="apply.html">Apply</a></li>
+          <li><a href="asset-recovery.html">Asset Recovery</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="main" class="container">
-    <section class="hero">
-      <div>
-        <div class="eyebrow">What we do</div>
-        <h1>Services</h1>
-        <p class="muted">We provide quick loans, lawful asset recovery, and sales of new & used motorbikes and tukutuks.</p>
-      </div>
-      <div class="card">
-        <h3>Quick Loans</h3>
-        <p class="muted">Short and medium-term loans with fast turnaround.</p>
-        <ul>
-          <li>Flexible repayment terms</li>
-          <li>Simple eligibility checks</li>
-          <li>Required documents: valid ID, proof of income, collateral documents (if any)</li>
-        </ul>
-        <a class="btn btn-primary" href="apply.html">Apply Now</a>
-      </div>
-    </section>
+  <main class="container">
+    <h1>Inventory</h1>
+    <p class="muted">New and used motorbikes and tukutuks available for purchase or reservation.</p>
 
-    <section class="services">
-      <div class="card service">
-        <h3>Asset Recovery</h3>
-        <p class="muted">Professional, lawful recovery of collateral and assets. We handle investigations, tracking, and recovery operations.</p>
-        <a class="btn btn-outline" href="asset-recovery.html">Learn More</a>
+    <div class="inventory">
+      <div class="item">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'/%3E" alt="125cc Bajaj">
+        <strong>125cc Bajaj (Used)</strong>
+        <div class="muted">Reliable, low mileage</div>
+        <div style="width:100%;display:flex;gap:.5rem;margin-top:.5rem">
+          <button class="btn btn-outline btn-reserve" data-title="125cc Bajaj (Used)" data-price="800">Enquire</button>
+          <a class="btn btn-primary" href="apply.html?item=125cc%20Bajaj">Reserve</a>
+        </div>
       </div>
 
-      <div class="card service">
-        <h3>Motorbikes & TukTuks</h3>
-        <p class="muted">Sales of new and used motorbikes and tukutuks in various sizes and conditions.</p>
-        <a class="btn btn-primary" href="inventory.html">Browse Inventory</a>
+      <div class="item">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'/%3E" alt="TukTuk Kainiu">
+        <strong>TukTuk - Kainiu (New)</strong>
+        <div class="muted">Fuel efficient, compact size</div>
+        <div style="width:100%;display:flex;gap:.5rem;margin-top:.5rem">
+          <button class="btn btn-outline btn-reserve" data-title="TukTuk - Kainiu (New)" data-price="2500">Enquire</button>
+          <a class="btn btn-primary" href="apply.html?item=TukTuk%20Kainiu">Reserve</a>
+        </div>
       </div>
-    </section>
+
+      <div class="item">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'/%3E" alt="ZhongSheng TukTuk">
+        <strong>TukTuk - ZhongSheng (Used)</strong>
+        <div class="muted">Spacious, ideal for cargo.</div>
+        <div style="width:100%;display:flex;gap:.5rem;margin-top:.5rem">
+          <button class="btn btn-outline btn-reserve" data-title="TukTuk - ZhongSheng (Used)" data-price="1600">Enquire</button>
+          <a class="btn btn-primary" href="apply.html?item=TukTuk%20ZhongSheng">Reserve</a>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer>
