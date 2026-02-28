@@ -1,122 +1,137 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Karomu Quick Loan Services</title>
-  <meta name="description" content="Karomu Quick Loan Services — Loans, asset recovery, new & used motorbikes and tukutuks in various sizes.">
-  <meta name="form-endpoint" content="REPLACE_FORM_ENDPOINT">
-  <meta name="owner-email" content="REPLACE_EMAIL">
-  <link rel="stylesheet" href="css/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Karomu | Premium Quick Loan Services</title>
+  <meta name="description" content="Trusted financial solutions with instant approvals and professional asset recovery.">
+  
+  <!-- Modern Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="header">
-    <div class="container nav">
+
+  <!-- Sleek Navigation -->
+  <header class="glass-nav">
+    <div class="container nav-wrapper">
       <div class="brand">
-        <div class="logo">KQ</div>
-        <div>
-          <div>Karomu Quick Loan Services</div>
-          <div class="muted" style="font-size:.85rem">Loans • Asset Recovery • Motorbikes & Tukutuks</div>
+        <div class="logo-icon">KQ</div>
+        <div class="brand-text">
+          <span class="brand-name">Karomu</span>
+          <span class="brand-tagline">Financial Excellence</span>
         </div>
       </div>
-      <nav id="nav-links">
+      <nav class="desktop-nav">
         <ul>
           <li><a href="services.html">Services</a></li>
           <li><a href="inventory.html">Inventory</a></li>
-          <li><a href="apply.html">Apply</a></li>
-          <li><a href="asset-recovery.html">Asset Recovery</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="asset-recovery.html">Recovery</a></li>
+          <li><a href="apply.html" class="nav-btn">Apply Now</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-grid">
-        <div class="eyebrow">Trusted. Fast. Local.</div>
-        <h1 id="hero-title">Karomu Quick Loan Services</h1>
-        <p>Fast loan approvals, professional asset recovery, and a wide selection of new & used motorbikes and tukutuks in different sizes.</p>
-        <div class="cta">
-          <a class="btn btn-primary" href="apply.html">Apply for a Loan</a>
-          <a class="btn btn-outline" href="inventory.html">Browse Inventory</a>
-        </div>
-
-        <section id="services" class="services" aria-label="Our Services">
-          <div class="card service">
-            <h3>Quick Loans</h3>
-            <p class="muted">Short and medium-term loans with quick turnaround.</p>
+  <main>
+    <!-- Hero Section with Motion -->
+    <section class="hero-section">
+      <div class="hero-bg-glow"></div>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="badge">Trusted by 5,000+ Clients</div>
+          <h1 class="hero-title">Financial Freedom, <span class="text-accent">Simplified.</span></h1>
+          <p class="hero-lead">Experience the fastest loan approvals in the region. Whether it's for business growth or personal needs, we provide seamless asset recovery and vehicle financing.</p>
+          
+          <div class="hero-actions">
+            <a href="#apply" class="btn btn-primary">Start Application</a>
+            <a href="services.html" class="btn btn-glass">Explore Services</a>
           </div>
 
-          <div class="card service">
-            <h3>Asset Recovery</h3>
-            <p class="muted">Professional, lawful recovery of collateral and assets.</p>
-          </div>
-
-          <div class="card service">
-            <h3>Motorbikes & TukTuks</h3>
-            <p class="muted">Sales of new and used motorbikes and tukutuks.</p>
-          </div>
-        </section>
-      </div>
-
-      <aside>
-        <div class="card" id="apply-widget" aria-labelledby="apply-title">
-          <h3 id="apply-title">Quick Loan Application</h3>
-          <form id="loanForm" novalidate>
-            <label for="name">Full name</label>
-            <input id="name" name="full_name" type="text" required>
-
-            <label for="phone">Phone</label>
-            <input id="phone" name="phone" type="tel" required>
-
-            <div class="two">
-              <div>
-                <label for="amount">Loan amount (approx)</label>
-                <input id="amount" name="loan_amount" type="number" min="1" required>
-              </div>
-              <div>
-                <label for="term">Term (months)</label>
-                <select id="term" name="term" required>
-                  <option value="">Select</option>
-                  <option>1</option>
-                  <option>3</option>
-                  <option>6</option>
-                  <option>12</option>
-                </select>
-              </div>
+          <!-- Trust Stats -->
+          <div class="stats-grid">
+            <div class="stat-item">
+              <span class="counter">15min</span>
+              <span class="stat-label">Fast Approval</span>
             </div>
-
-            <label for="collateral">Collateral (if any)</label>
-            <input id="collateral" name="collateral_description" type="text">
-
-            <label for="message">Notes</label>
-            <textarea id="message" name="message" rows="3"></textarea>
-
-            <button type="submit" class="btn btn-primary" style="width:100%;margin-top:.75rem">Submit Application</button>
-          </form>
+            <div class="stat-item">
+              <span class="counter">Low Rate</span>
+              <span class="stat-label">Flexible Interest</span>
+            </div>
+          </div>
         </div>
 
-        <div style="height:1rem"></div>
+        <!-- Sleek Widget -->
+        <aside class="application-widget" id="apply">
+          <div class="glass-card">
+            <h3>Quick Apply</h3>
+            <p class="small text-muted">Get a decision in minutes</p>
+            <form id="loanForm" class="modern-form">
+              <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" placeholder="John Doe" required>
+              </div>
+              <div class="input-group">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="+256 000 000 000" required>
+              </div>
+              <div class="form-row">
+                <div class="input-group">
+                  <label>Amount (UGX)</label>
+                  <input type="number" placeholder="500,000">
+                </div>
+                <div class="input-group">
+                  <label>Term</label>
+                  <select>
+                    <option>1 Month</option>
+                    <option>3 Months</option>
+                    <option>6 Months</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary full-width">Submit Request</button>
+            </form>
+          </div>
+        </aside>
+      </div>
+    </section>
 
-        <div class="card">
-          <h4>Contact & Support</h4>
-          <p class="muted">Phone: <a href="tel:+256754275178">+256754275178</a></p>
-          <p class="muted">Email: <a href="mailto:support@karomu.com">support@karomu.com</a></p>
-          <p class="muted">Open: Mon–Sat 8:00–17:00</p>
-        </div>
-      </aside>
+    <!-- Features Section -->
+    <section class="features container">
+      <div class="card feature-card">
+        <div class="icon">⚡</div>
+        <h4>Instant Loans</h4>
+        <p>Approval within minutes with minimal documentation required.</p>
+      </div>
+      <div class="card feature-card">
+        <div class="icon">🛡️</div>
+        <h4>Asset Recovery</h4>
+        <p>Professional and lawful recovery services specialized in collateral.</p>
+      </div>
+      <div class="card feature-card">
+        <div class="icon">🏍️</div>
+        <h4>Vehicle Sales</h4>
+        <p>New and used motorbikes & TukTuks at the most competitive prices.</p>
+      </div>
     </section>
   </main>
 
   <footer>
-    <div class="container footer-grid">
-      <div class="muted">© <span id="year"></span> Karomu Quick Loan Services. All rights reserved.</div>
-      <div class="muted">Privacy • Terms • Support</div>
+    <div class="container footer-content">
+      <p>&copy; 2024 Karomu Quick Loan Services. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
     </div>
   </footer>
 
-  <script src="js/scripts.js" defer></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
-  
+
+       
+      
