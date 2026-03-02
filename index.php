@@ -1,172 +1,106 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
-<meta charset="utf-8" />
-<title>siteName</title>
-<meta name="description" content="" />
-<meta name="keywords" content="" />
-<link rel="shortcut icon" href="img/share/favicon.ico" />
-<link href="css/style.css" rel="stylesheet" media="all" />
-<!--[if lt IE 9]>
-<script src="../js/html5shiv-printshiv.js"></script>
-<![endif]-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karomu Quick Loan Services</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; color: #333; }
+        header { background: #2c3e50; color: #fff; padding: 1rem; text-align: center; }
+        .container { width: 80%; margin: auto; overflow: hidden; padding: 20px; }
+        .services { display: flex; justify-content: space-around; background: #f4f4f4; padding: 20px; border-radius: 8px; }
+        .service-box { text-align: center; flex: 1; }
+        .form-container { background: #fff; padding: 20px; margin-top: 20px; border: 1px solid #ddd; border-radius: 8px; }
+        input, select, textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; }
+        button { background: #27ae60; color: white; padding: 10px 20px; border: none; cursor: pointer; border-radius: 4px; }
+        button:hover { background: #219150; }
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 20px; margin-top: 20px; }
+        .success { color: green; font-weight: bold; }
+    </style>
 </head>
+<body>
 
-<body id="">
-<div id="page">
-
-<div id="headerWrap">
 <header>
-<p id="description">サイトの説明が入ります。</p>
-<div id="logo">
-<h1><a href="index.php">siteName</a></h1>
-<!-- / #logo --></div>
-<nav id="gNav">
-<ul>
-<li class=""><a href="/">グローバルナビゲーション</a></li>
-<li class=""><a href="/">グローバルナビゲーション</a></li>
-<li class=""><a href="/">グローバルナビゲーション</a></li>
-<li class=""><a href="/">グローバルナビゲーション</a></li>
-<li class=""><a href="/">グローバルナビゲーション</a></li>
-</ul>
-<!-- / #gNav --></nav>
-<div id="hOrder">
-<div id="hOrderTel">00-0000-0000</div>
-<ul>
-<li class="pamphlet"><a href="form/inquiry.php?id=pamphlet">資料請求</a></li>
-<li class="seminar"><a href="form/inquiry.php?id=seminar">学校説明会</a></li>
-</ul>
-<!-- / #hOrder --></div>
-<!--
-<ul id="utilityNav">
-<li><a href="/">ユーティリティナビ</a></li>
-<li><a href="/">ユーティリティナビ</a></li>
-</ul>
--->
+    <h1>Karomu Quick Loan Services</h1>
+    <p>Your Trusted Partner for Loans & Mobility</p>
 </header>
-<!-- / #headerWrap --></div>
 
-<div id="mainVisualWrap">
-<div id="mainVisual">
-<h1>ここに見出し</h1>
-<p>ここに説明が入ります。ここに説明が入ります。ここに説明が入ります。</p>
-<!-- / #mainVisual --></div>
-<!-- / #mainVisualWrap --></div>
+<div class="container">
+    <section>
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service-box">
+                <h3>Quick Loans</h3>
+                <p>Instant financial support with flexible repayment.</p>
+            </div>
+            <div class="service-box">
+                <h3>New & Used Bikes</h3>
+                <p>Quality motorcycles at affordable prices.</p>            </div>
+            <div class="service-box">
+                <h3>Tuk-tuks</h3>
+                <p>Reliable 3-wheelers for business and personal use.</p>
+            </div>
+        </div>
+    </section>
 
-<div id="contents">
-<div id="main">
-<div id="topicPath"><a href="../">HOME</a> &gt; </div>
-
-<p>ここにテキストが入ります。</p>
-<p>ここにテキストが入ります。</p>
-<p>ここにテキストが入ります。</p>
-<p>ここにテキストが入ります。</p>
-<p>ここにテキストが入ります。</p>
-
-<!--
-<div id="mfOrder">
-<p>より詳しいスクールの様子を収録。
-ぜひ説明会参加前にお読みください</p>
-<div class="orderBtn"><a href="/">資料請求</a></div>
+    <section class="form-container">
+        <h2>Apply for Service</h2>
+        <?php 
+        if(isset($_GET['status']) && $_GET['status'] == 'success') {
+            echo "<p class='success'>Application submitted successfully!</p>";
+        }
+        ?>
+        <form action="process.php" method="POST">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="text" name="phone" placeholder="Phone Number" required>
+            <select name="service" required>
+                <option value="">Select Service</option>
+                <option value="Loan">Loan Application</option>
+                <option value="Bike">Buy a Bike</option>
+                <option value="Tuk-tuk">Buy a Tuk-tuk</option>
+            </select>
+            <textarea name="message" rows="4" placeholder="Additional details..."></textarea>
+            <button type="submit">Submit Application</button>
+        </form>
+    </section>
 </div>
--->
-<!-- / #main --></div>
 
-<div id="sub">
-<div id="subOrder">
-<ul>
-<li><a href=""><img src="" width="" height="" alt=""></a></li>
-<li><a href=""><img src="" width="" height="" alt=""></a></li>
-</ul>
-<!-- / #subOrder --></div>
-
-<div id="subNavCourse">
-<h2><a href=""><img src="" width="" height="" alt=""></a></h2>
-<ul>
-<li>
-<a href="">
-<div class="pict"><img src="http://dummyimage.com/60x60/ededed/555.png" width="" height="" alt=""></div><!--
---><div class="text">
-<p  class="arr01">メニュー01</p>
-</div>
-</a>
-</li>
-</ul>
-<!-- / #subNavCourse --></div>
-
-<div id="subNav">
-<h2><a href=""><img src="" width="" height="" alt=""></a></h2>
-<ul class="arr01">
-<li><a href="">メニューが入ります。</a></li>
-<li><a href="">メニューが入ります。</a></li>
-<li><a href="">メニューが入ります。</a></li>
-<li><a href="">メニューが入ります。</a></li>
-<li><a href="">メニューが入ります。</a></li>
-</ul>
-<!-- / #subNav --></div>
-<!-- / #sub --></div>
-
-<p class="pageTop">
-<a href="#page"><img src="" width="" height="" alt="ページトップへ戻る" /></a>
-</p>
-<!-- / #contents --></div>
-
-<div id="footerWrap">
 <footer>
-
-<div id="fNav">
-<ul>
-<li><a href="/">フッターナビ</a></li><!--
---><li><a href="/">フッターナビ</a></li><!--
---><li><a href="/">フッターナビ</a></li>
-</ul>
-<!-- / #fNav --></div>
-
-<div class="wrap">
-
-<div class="leftBox">
-<div id="fCompany">
-<div id="fLogo">siteName</div>
-<p>○○アカデミー<br>
-東京都港区六本木4－5－2 MW 六本木ビル2F</p>
-<!-- / #fCompany --></div>
-<!-- / .leftBox --></div>
-
-<div class="rightBox">
-<div class="wrap">
-<div id="fOrderTel">tel00-0000-0000 平日00：00～00：00</div>
-<ul>
-<li class="pamphlet"><a href="">資料請求</a></li>
-<li class="seminar"><a href="">学校説明会</a></li>
-</ul>
-<!-- / #fOrder --></div>
-<!-- / .rightBox --></div>
-<!-- / .wrap --></div>
-
+    <p><strong>Location:</strong> 2nd Street, Kiboga</p>
+    <p><strong>Contacts:</strong> +256 700 000000 | +256 780 000000</p>
+    <p><strong>Email:</strong> info@karomu.com | sales@karomu.com</p>
+    <p><strong>Availability:</strong> Mon - Sat (08:00 AM - 06:00 PM)</p>
 </footer>
-<!-- / #footerWrap --></div>
-<!-- / #page --></div>
-
-<script src="http://www.google.com/jsapi" ></script>
-<script>google.load("jquery", "1.7");</script>
-<script src="/js/share.js"></script>
-<script src="/js/ga.js"></script>
-<!--[if (gte IE 6)&(lte IE 8)]>
-<script src="/js/selectivizr.js" charset="utf-8"></script>
-<script src="/js/nwmatcher.js" charset="utf-8"></script>
-<![endif]-->
-<!--[if IE 6]>
-<script type="text/javascript" src="/js/DD_belatedPNG_0.0.8a-min.js"></script> 
-<script>
-DD_belatedPNG.fix('img, .png_bg');
-</script> 
-<![endif]-->
-<script src="/js/jquery.tile.js" ></script>
-<script charset="utf-8">
-$(function(){
-  $(".itemList ul li.item01 .itemWrap").tile();
-});
-</script>
 
 </body>
-</html>
+</html>```
+
+### 2. process.php
+This script handles the form submission logic.
+
+```php
+<?phpif ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Collect and sanitize input
+    $name = htmlspecialchars(strip_tags($_POST['name']));
+    $email = htmlspecialchars(strip_tags($_POST['email']));
+    $phone = htmlspecialchars(strip_tags($_POST['phone']));
+    $service = htmlspecialchars(strip_tags($_POST['service']));
+    $message = htmlspecialchars(strip_tags($_POST['message']));
+
+    // Email Configuration
+    $to = "info@karomu.com";
+    $subject = "New Application: $service from $name";
+    $body = "Name: $name\nEmail: $email\nPhone: $phone\nService: $service\nDetails: $message";
+    $headers = "From: webmaster@karomu.com";
+
+    // Send email (requires a configured mail server)
+    // mail($to, $subject, $body, $headers);
+
+    // Redirect back with success message
+    header("Location: index.php?status=success");
+    exit();
+} else {
+    header("Location: index.php");
+    exit();
+}
