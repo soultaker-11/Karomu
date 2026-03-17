@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karomu Quick Services | Your Financial Solutions</title>
+    <title>Karomu Quick Loan Services | Your Financial Solutions</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #1b5e20; /* Deep Green */
-            --secondary: #ffc107; /* Gold */            --accent: #2e7d32;
-            --light: #f8f9fa;        }
+            --primary: #0277bd; /* Light Blue */
+            --secondary: #ff9800; /* Orange */
+            --accent: #01579b;
+            --light: #f1f8fe;
+        }
 
         body {
             font-family: 'Poppins', sans-serif;
-            margin: 0;            padding: 0;
-            background: linear-gradient(135deg, #e8f5e9 0%, #ffffff 100%);
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #e1f5fe 0%, #ffffff 100%);
             color: #333;
-            position: relative;            overflow-x: hidden;
+            position: relative;
+            overflow-x: hidden;
         }
 
         /* Dollar Sign Background Watermark */
@@ -27,31 +31,47 @@
             top: 20%;
             left: -5%;
             font-size: 40rem;
-            color: rgba(27, 94, 32, 0.03);
+            color: rgba(2, 119, 189, 0.03);
             z-index: -1;
             font-weight: bold;
         }
 
         body::after {
             content: '$';
-            position: fixed;            bottom: -10%;
+            position: fixed;
+            bottom: -10%;
             right: -5%;
             font-size: 30rem;
-            color: rgba(255, 193, 7, 0.05);
+            color: rgba(255, 152, 0, 0.05);
             z-index: -1;
             font-weight: bold;
         }
 
         header {
             background: var(--primary);
-            color: light blue;
-            padding: 60px 20px;
+            color: white;
+            padding: 80px 20px;
             text-align: center;
-            border-bottom: 5px solid var(--secondary);            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-bottom: 5px solid var(--secondary);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        header .logo-container {
+            width: 220px;
+            height: 220px;
+            margin: 0 auto 20px;
+        }
+
+        header .logo {
+            width: 220px;
+            height: 220px;
+            object-fit: contain;
+            display: block;
         }
 
         header h1 { margin: 0; font-size: 3rem; text-transform: uppercase; letter-spacing: 2px; }
-        header p { font-style: italic; font-size: 1.2rem; color: var(--secondary); margin-top: 10px; }
+        header p { font-style: italic; font-size: 1.2rem; color: #fff; margin-top: 10px; opacity: 0.9; }
+        header p span { color: var(--secondary); font-weight: 600; }
 
         .container { width: 90%; max-width: 1200px; margin: -40px auto 40px; }
 
@@ -60,21 +80,48 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
             margin-bottom: 50px;
-        }        .card {
+        }
+
+        .card {
             background: white;
-            padding: 30px;
+            padding: 0;
             border-radius: 15px;
             text-align: center;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             transition: transform 0.3s ease;
             border-top: 4px solid var(--primary);
+            overflow: hidden;
         }
 
         .card:hover { transform: translateY(-10px); }
-        .card h3 { color: var(--primary); font-size: 1.5rem; }
+        
+        .card-img {
+            width: 100%;
+            height: 200px;
+            background: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.9rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 30px;
+        }
+
+        .card h3 { color: var(--primary); font-size: 1.5rem; margin-top: 0; }
 
         .form-section {
-            background: cream;
+            background: white;
             padding: 40px;
             border-radius: 20px;
             box-shadow: 0 15px 50px rgba(0,0,0,0.1);
@@ -133,33 +180,50 @@
 <body>
 
 <header>
-    <h1>Karomu Quick Services</h1>
-    <p>"Your Financial Solutions"</p>
+    <div class="logo-container">
+        <img src="assets/logo.png" alt="Karomu Logo" class="logo">
+    </div>
+    <h1>Karomu Quick Loan Services</h1>
+    <p>"Your <span>Financial Solutions</span>"</p>
 </header>
 
 <div class="container">
     <div class="services-grid">
         <div class="card">
-            <h3>💰 Quick Loans</h3>
-            <p>Tailored Loans with competitive interest rates and rapid approval.</p>
-        </div>
-        <div class="card">            <h3>🏍️ Bike Sales</h3>
-            <p>New and high-quality used bikes. Available on loan,paying in installments.</p>
+            <div class="card-img">
+                <img src="assets/loans.jpg" alt="Quick Loans">
+            </div>
+            <div class="card-content">
+                <h3>💰 Quick Loans</h3>
+                <p>Tailored financial solutions with competitive interest rates and rapid approval.</p>
+            </div>
         </div>
         <div class="card">
-            <h3>🛺 Tuk-Tuks</h3>
-            <p>Reliable 3-wheelers for your transport business.Durable and fuel-efficient,still available on loan.</p>
+            <div class="card-img">
+                <img src="assets/bikes.jpg" alt="Bike Sales">
+            </div>
+            <div class="card-content">
+                <h3>🏍️ Bike Sales</h3>
+                <p>New and high-quality used bikes. Ride away with our easy financing options.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">
+                <img src="assets/tuktuk.jpg" alt="Tuk-Tuks">
+            </div>
+            <div class="card-content">
+                <h3>🛺 Tuk-Tuks</h3>
+                <p>Reliable 3-wheelers for your transport business. Durable and fuel-efficient.</p>
+            </div>
         </div>
     </div>
 
     <section class="form-section">
         <h2>Service Application</h2>
-        <?php if(isset($_GET['sent'])): ?>
-            <div class="success-msg">Application sent! Our team will contact you shortly.</div>
-        <?php endif; ?>
-                <form action="process.php" method="POST">
+        <div id="success-msg" class="success-msg" style="display:none;">Application sent! Our team will contact you shortly.</div>
+        <form id="contact-form">
             <input type="text" name="name" placeholder="Full Name" required>
-            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="text" name="address" placeholder="Physical Address" required>
             <input type="text" name="phone" placeholder="Phone Number" required>
             <select name="interest" required>
                 <option value="">What are you looking for?</option>
@@ -172,27 +236,51 @@
             <button type="submit">Get Started Now</button>
         </form>
     </section>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name     = this.querySelector('[name="name"]').value;
+            const address  = this.querySelector('[name="address"]').value;
+            const phone    = this.querySelector('[name="phone"]').value;
+            const interest = this.querySelector('[name="interest"]').value;
+            const note     = this.querySelector('[name="note"]').value;
+
+            const message = encodeURIComponent(
+                '🔔 *Karomu Service Application*\n' +
+                '----------------------------\n' +
+                '*Name:* ' + name + '\n' +
+                '*Address:* ' + address + '\n' +
+                '*Phone:* ' + phone + '\n' +
+                '*Service:* ' + interest + '\n' +
+                '*Details:* ' + note
+            );
+
+            window.location.href = 'https://wa.me/256705862555?text=' + message;
+        });
+    </script>
 </div>
 
 <footer>    <div class="info-grid">
         <div class="info-item">
-            <h4>📍 Location</h4>
-            <p>2nd Street, Kiboga</p>
-        </div>
-        <div class="info-item">            <h4>📞 Contact</h4>
-            <p>+256 754275178<br>+256 782559240</p>
+            <h4>🏢 Physical Address</h4>
+            <p>2nd Street, Kiboga<br>Uganda</p>
         </div>
         <div class="info-item">
-            <h4>✉️ Email</h4>
-            <p>info@karomu.com<br>sales@karomu.com</p>
+            <h4>📞 Contact</h4>
+            <p>078559240<br>0754275178</p>
         </div>
         <div class="info-item">
             <h4>⏰ Hours</h4>
             <p>Mon - Sat<br>08:00 AM - 06:00 PM</p>
         </div>
     </div>
-    <p>&copy; <?php echo date('Y'); ?> Karomu Quick Loan Services. All Rights Reserved.</p>
+    <p>&copy; <span id="year"></span> Karomu Quick Loan Services. All Rights Reserved.</p>
 </footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
